@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ln="en" xmlns:th="www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand text-white" href="#">Book Store</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse " id="navbarNavDropdown">
+				<ul class="navbar-nav  ">
+					<li class="nav-item "><a class="nav-link text-white" href="#">HOME</a>
+					</li>
+
+					<li class="nav-item"><a class="nav-link text-white" href="#">Available
+							book</a></li>
+
+					<li class="nav-item"><a class="nav-link text-white" href="#">My
+							books</a></li>
+				</ul>
+
+			</div>
+			<div>
+				<a class="nav-link text-white" th:href="@{/newbook}">
+					Register New Book</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container my-5 p-5" style="border:1px solid black;">
+		<form th:action="@{/save_booklist}" th:object="${books}" method="post" class="col-md-4 offset-md-4">
+			<!--  <div class="mb-3">
+				<input th:field="*{id}"
+					type="hidden" class="form-control">
+			</div>-->
+			<div class="mb-3">
+				<label class="form-label">Book Name</label> <input th:field="*{name}"
+					type="text" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Author Name</label> <input th:field="*{author}"
+					type="text" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Book Price</label> <input th:field="*{price}"
+					type="text" class="form-control">
+			</div>
+			<center><button type="submit" class="btn btn-primary" >submit</button>
+	</center></div>
+	</form>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

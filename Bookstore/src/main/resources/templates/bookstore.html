@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ln="en" xmlns:th="www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand text-white" href="#">Book Store</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse " id="navbarNavDropdown">
+				<ul class="navbar-nav  ">
+					<li class="nav-item "><a class="nav-link text-white" href="#">HOME</a>
+					</li>
+
+					<li class="nav-item"><a class="nav-link text-white" th:href="@{/available_books}">Available
+							books</a></li>
+
+					<li class="nav-item"><a class="nav-link text-white" th:href="@{/mybooklist}">My
+							books</a></li>
+				 </ul>
+				
+			</div>
+			<div>
+					<a class="nav-link text-white" th:href="@{/newbook}">New Book Register</a>
+				</div>
+			
+		</div>
+		
+	</nav>
+<div class="container text-center">
+<h1>WELCOME TO NEW BOOKSTORE</h1>
+<h6>The faster you type, the faster you communicate with others. With our free typing speed test, you can check your WPM and CPM typing scores in a flash!
+You've visited thisThe faster you type, the faster you communicate with others. With our free typing speed test, you can check your WPM and CPM typing scores in a flash!
+You've d thisThe faster you type, the faster you communicate with others. With our free typing speed test, you can check your WPM and CPM typing scores in a flash!
+You've visited this</h6>
+<img src="/images/images.jpeg " height = "300" width="366">
+
+</div>
+
+</body>
+</html>

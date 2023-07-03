@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  bookstore-app:
+   image: "bookstore_app:v1"
+   build: .
+   restart: always
+   container_name: spring_app_container
+   ports:
+   - 8099:8099
+   depends_on:
+    - dB
+ 
+  dB:
+   image: "mysql"
+   environment:
+    DATABASE_HOST: mysqlcontainer
+    DATABASE_PORT: 3306
+    MYSQL_ROOT_PASSWORD: root-123
+    MYSQL_USER: sa
+    MYSQL_PASSWORD: sa
+    MYSQL_DATABASE: BOOKSTORE
+  

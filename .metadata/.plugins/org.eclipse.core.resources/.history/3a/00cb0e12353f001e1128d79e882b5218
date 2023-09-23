@@ -1,0 +1,9 @@
+package com.uploaddownload.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.uploaddownload.Model.Product;
+@org.springframework.stereotype.Repository
+public interface Repository extends JpaRepository<Product, Integer>{
+
+}

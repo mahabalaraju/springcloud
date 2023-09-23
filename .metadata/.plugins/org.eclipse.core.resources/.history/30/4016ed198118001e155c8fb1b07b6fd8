@@ -1,0 +1,35 @@
+package com.uploaddownload;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class junit {
+
+	MathUtils u;
+	
+	@BeforeEach
+	void asf() {
+		u=new MathUtils();
+	}
+	@Test
+	void test() {
+	 int expected=3;
+	int actual=u.add(1, 2);
+	assertEquals(expected, actual);
+	
+	}
+	
+	@Test
+	void tesa() {
+		assertEquals(452.3893421169302, u.areaofCircle(12),"give right input");
+	}
+	
+	@Test
+	void tesse() {
+		assertThrows(ArithmeticException.class, ()->u.dividebyzero(1, 0),"divide by zero must throw exception");
+	}
+}

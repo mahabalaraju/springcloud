@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  springmvc:
+   image: spring_app
+   build: .
+   ports:
+   - 8098:8098
+   depends_on:
+    - mysqldb
+    
+  mysqldb:
+   image: mysql
+   ports:
+   - 1211:1211
+   environment:
+    MYSQL_ROOT_PASSWORD: root-123
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: user
+    MYSQL_DATABASE: springmvc
+  

@@ -1,0 +1,15 @@
+server:
+  port: 8098
+spring:
+  datasource:
+    password: user
+    url: jdbc:mysql://msyqldb:1211/springmvc?useSSL=false
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format-sql: true
+    show-sql: true

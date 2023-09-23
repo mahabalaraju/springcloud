@@ -1,0 +1,41 @@
+version: "3.8"
+
+#networks:
+  #-mynetwork:
+ # external: 
+    #  name: mynetwork
+      
+services:
+  web:
+   image: person
+   ports:
+   - 8900:8900
+   restart: always
+   container_name: person_container
+   depends_on:
+   - db
+  # networks:
+   #- mynetwork
+   
+   environment:
+    SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/persondb
+    SPRING_DATASOURCE_USER: admin
+    SPRING_DATASOUCE_PASSWORD: root
+   
+    
+    
+  db:
+   image: mysql
+   restart: always
+   ports:
+   - 3306:3306
+   container_name: mysqldb
+  # networks:
+   #  - mynetwork
+   environment:
+    MYSQL_ROOT_PASSWORD: root-123
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: root
+    MYSQL_DATABASE: persondb
+  
+ 

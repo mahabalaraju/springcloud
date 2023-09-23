@@ -1,0 +1,31 @@
+package general;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
+public class MathUtils {
+public int add(int a , int b) {
+	return a+b;
+}
+public double computeCircle(double radius) {
+	return Math.PI*radius*radius;
+}
+public static void main(String[] args) {
+	
+    List<String> colors = new ArrayList<>();
+    colors.add("Red");
+    colors.add("Green");
+    colors.add("Blue");
+
+    ListIterator<String> listIterator = colors.listIterator();
+
+	 System.out.println("Backward traversal:");
+     while (listIterator.hasPrevious()) {
+         int index = listIterator.previousIndex();
+         String color = listIterator.previous();
+         System.out.println("Index: " + index + ", Color: " + color);
+     }
+
+}
+}

@@ -1,5 +1,0 @@
--e MYSQL_HOST=mysqlDB
--e MYSQL_DATABASE=bookstore
--e MYSQL_USER=root 
--e MYSQL_PASSWORD=root-123 
--e MYSQL_PORT=3306

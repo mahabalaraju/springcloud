@@ -1,0 +1,14 @@
+#spring:
+ # datasource:
+  # url: jdbc:h2://mem:db;  
+ #  username: mahabala
+  # password: raju
+  # driver-class-name: org.h2.Driver
+   
+  #jpa:
+ #   properties:
+  #        hiberanate:
+   #       dialect: org.hibernate.dialect.H2Dialect
+  #  show-sql: true
+  #  hibernate:
+   #   ddl-auto: update

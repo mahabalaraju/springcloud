@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  my-app:
+   build: .
+   restart: always
+   container_name: uploaddownloadApp
+   networks:
+     - mynetworks
+   environment:
+    SPRING_DATASOURCE_URL: jdbc:mysql://mysql_database:9892/bookstore
+    SPRING_DATASOURCE_USERNAME: mahabala
+    SPRING_DATASOURCE_PASSWORD: raju
+    SPRING_DATASOURCE_DATABASE: bookstore
+    
+   depends_on:
+            - mysql_database
+            
+  mysql_database:
+   image: mysql:latest
+   restart: always
+   environment:
+    MYSQL_DATABASE: 
+    MYSQL_USER:
+    MYSQL_PASSWORD:
+    MYSQL_ROOT_PASSWORD: 
+   networks: 
+     - mynetworks
+   volumes:
+    - dbData:var/lib/mysql/data
+    
+volumes:
+  dbData

@@ -1,22 +1,44 @@
 version: "3.8"
+
 services:
+
   bookstore-app:
-   image: "bookstore_app:v1"
-   build: .
-   restart: always
+   image: bookstore
    container_name: spring_app_container
    ports:
-   - 8099:8099
-   depends_on:
-    - dB
- 
-  dB:
-   image: "mysql"
+   - 8090:8099
+   networks:
+    - bookstorenetwork
    environment:
-    DATABASE_HOST: mysqlcontainer
-    DATABASE_PORT: 3306
+    SPRING_DATASOURCE_URL: jdbc:mysql://mydb:3306/BOOKSTORE
+    SPRING_DATASOURCE_USER: admin
+    SPRING_DATASOUCE_PASSWORD: user
+ 
+   depends_on:
+   - mydb
+ 
+  mydb:
+   image: mysql
+   restart: always
+   ports:
+   - 3307:3306
+   container_name: mydb
+   environment:
     MYSQL_ROOT_PASSWORD: root-123
-    MYSQL_USER: sa
-    MYSQL_PASSWORD: sa
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: user
     MYSQL_DATABASE: BOOKSTORE
-  
+    
+   networks:
+     - bookstorenetwork
+     
+   volumes:
+   - bookDatabase:var/lib/mysql/data
+  # - C:\Users\sanga\Desktop\mahabalaraj\bookstoreDatabase:var/lib/mysql/data
+  # -var/lib/mysql/data   
+networks:
+  bookstorenetwork:
+   external: true
+
+volumes:
+  bookDatabase:

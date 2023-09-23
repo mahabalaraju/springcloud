@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+
+  springboot_app:
+   container_name: spring_app_-container
+   image: "spring_app:v1"
+   build: .
+   restart: always
+   ports:
+   - 2323-2333:3221
+   networks:
+    - mynetwork
+    
+  mysqldb:
+   image: "image"
+   container_name: mysql container
+   networks:
+    - mynetwork
+   ports:
+   - 3306:3307
+   environment:
+   
+    MYSQL_DATABASE: bookstore
+    MYSQL_USER: mahabala
+    MYSQL_PASSWORD: raj
+   
+    
+   
+    
+  
+  
+ 
+

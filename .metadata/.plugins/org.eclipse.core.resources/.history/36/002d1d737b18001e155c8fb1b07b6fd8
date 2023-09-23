@@ -1,0 +1,46 @@
+package com.uploaddownload;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class JunitTestcassees {
+
+	MathUtils mathutils;
+	
+//	@BeforeAll
+//	void showme() {
+//		System.out.println("I'm learning Junit");
+//	}
+//	
+//	@BeforeEach
+//	void beforeeach() {
+//	mathutils=new MathUtils();	
+//	}
+//	
+//	@AfterAll
+//    void afterall() {
+//	System.out.println("the total set up closed");
+//	}
+	
+	@Test
+	@DisplayName("areaofcircle")
+	void testTest() {
+		assertEquals(121, mathutils.areaofCircle(12),"provide valid value");
+	}
+
+	@Test
+	@DisplayName("addmethod")
+	void testTesa() {
+		assertEquals(121,mathutils.add(1, 1),"think positively and correctly");
+	}
+
+	@Test
+	@DisplayName("division method")
+	void tetaa() {
+		assertThrows(AirthmeticException.class,()->mathutils.dividebyzero(1,0),"check what happens" );
+	}
+}

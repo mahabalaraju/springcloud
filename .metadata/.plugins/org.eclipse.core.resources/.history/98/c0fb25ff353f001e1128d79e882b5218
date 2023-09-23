@@ -1,0 +1,11 @@
+package com.uploaddownload.Repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.uploaddownload.Model.Product;
+@org.springframework.stereotype.Repository
+public interface repository extends JpaRepository<Product, Integer>{
+ public Optional<Product> findByName(String filename);
+}

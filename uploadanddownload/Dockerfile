@@ -1,0 +1,3 @@
+FROM openjdk:17
+ADD target/upload.jar download.jar
+ENTRYPOINT [ "java","-jar","download.jar" ]

@@ -1,0 +1,5 @@
+package com.uploaddownload.Exception;
+
+public class FileNotFoundException extends Exception {
+
+}

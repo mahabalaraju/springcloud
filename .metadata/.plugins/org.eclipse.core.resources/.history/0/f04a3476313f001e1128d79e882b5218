@@ -1,0 +1,5 @@
+package com.uploaddownload.Repository;
+
+public interface repository {
+
+}

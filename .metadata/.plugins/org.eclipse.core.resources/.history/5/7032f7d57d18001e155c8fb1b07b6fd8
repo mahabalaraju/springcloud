@@ -1,0 +1,24 @@
+package com.uploaddownload;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class junit {
+
+	@Test
+	void test() {
+	MathUtils u=new MathUtils();
+	 int expected=3;
+	int actual=u.add(1, 2);
+	assertEquals(expected, actual);
+	
+	}
+	
+	@Test
+	void tesa() {
+		MathUtils u=new MathUtils();
+		assertEquals(452.3893421169302, u.areaofCircle(12),"give right input");
+	}
+
+}

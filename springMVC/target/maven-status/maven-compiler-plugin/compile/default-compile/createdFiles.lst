@@ -1,0 +1,7 @@
+com\champion\person\person.class
+com\champion\controller\controller.class
+com\champion\Service\serviceImpl.class
+com\champion\Repo\personRepo.class
+com\champion\SpringMvcApplication.class
+com\champion\Exception\personnotfoundexception.class
+com\champion\Service\personService.class

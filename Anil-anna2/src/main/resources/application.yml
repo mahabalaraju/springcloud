@@ -1,0 +1,14 @@
+server:
+  port: 2323
+spring:
+  datasource:
+    password: root-123
+    url: jdbc:mysql://localhost:3306/mahabala
+    username: root
+  jpa:
+   properties:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    dialect: org.hibernate.dialect.H2Dialect
+    

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+     url: jdbc:h2:file:C:/h2-database/testDB
+     username: mahabala
+     password: raju
+  h2:
+    console:
+      path: /h2
+      enabled: true
+  jpa:
+   properties:
+      
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.H2Dialect
+    
+     

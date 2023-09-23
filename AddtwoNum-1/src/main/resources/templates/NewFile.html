@@ -1,0 +1,16 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Two Numbers</title>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    <form th:action="@{/result}" th:object="${num}" method="post">
+        <p>Number One: <input type="number" th:field="*{num_one}"/></p>
+        <p>Number Two: <input type="number" th:field="*{num_two}"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+</body>
+</html>

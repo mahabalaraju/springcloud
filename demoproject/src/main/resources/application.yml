@@ -1,0 +1,9 @@
+Url: '{connectionString: ''http://_____'',username:''raj'',password:''raju''}'
+db:
+  connection: '{connection: ''http://sdafasdf'',username:raju,password:''raj''}'
+  host: 232.232.2.2
+  port: 1212
+mail:
+  email: mahabalaraj4@gmail.com
+  host: gmail.com
+  password: raj
